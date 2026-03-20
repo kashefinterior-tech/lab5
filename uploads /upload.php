@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>upload result</title>
     </head>
     <body>
@@ -24,27 +24,30 @@
             $allowedTypes=["jpg","jpeg","png","gif","webp"];
 
             if(in_array($imageFileType, $allowedTypes)){
+
+                if(move_uploaded_file($tempName, $targetFile)){
                 echo"<p> image uploaded successfully!</p>";
                 echo"<p>file name:" .htmlspecialchars($fileName)."</p>";
                 echo"<img src='$targetFile' alt='Uploaded Image' width='300'>";
             }else{
                 echo"<p>sorry, there is the problem.</p>";
             }
-            else{
+            }else{
                 echo"<p> only jpg, jpeg, png, Gif, and WEBP files are allowed.</p>;";
             }
-            else{
+            }else{
                 echo"<p> no file uploaded or there is an error.</p>";
             }
-            else{
+            }else{
                 echo"<p> please upload an image using form.</p>";
             }
-            }
-
-        }
+          
 
     
     ?>
+    <br><br>
+
+    <a href="index.php">go back</a>
 
     </body>
 </html>
