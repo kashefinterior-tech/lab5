@@ -1,3 +1,12 @@
+/*
+Name: Melika Kashef
+Student Number: 200652992
+Course: COMP1006
+Lab: Lab Five - Image Upload
+Date: March 2026
+Description: This program allows users to upload an image and displays it.
+*/
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
